@@ -41,24 +41,19 @@ class Game:
 					pair_number = self.rounds[6][i]
 
 		#To par
-		
+
 
 
 		return points
 
 
 
+if __name__ == "__main__":
+	game = Game()
 
-game = Game()
-
-for i in xrange(0, 50):
-	game.throw_dice([])
-	game.check_number()
-
-
-print game.points()
+	for i in xrange(0, 50):
+		game.throw_dice([])
+		game.check_number()
 
 
-
-
-
+	print game.points()
