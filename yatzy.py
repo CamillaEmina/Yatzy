@@ -75,9 +75,9 @@ class Game:
 		second_pair = 0
 		for i in range(5):
 			for j in range(5):
-				if i != j and self.rounds[7][i] == self.rounds[7][j] and first_pair == 0 > pair_number:
+				if i != j and self.rounds[7][i] == self.rounds[7][j] and self.rounds[7][i] > first_pair:
 					first_pair = self.rounds[7][i]
-				elif i != j and self.rounds[7][i] == self.rounds[7][j] and second_pair == 0 > pair_number:
+				elif i != j and self.rounds[7][i] == self.rounds[7][j] and self.rounds[7][i] > second_pair and self.rounds[7][i] != first_pair:
 					second_pair = self.rounds[7][i]
 
 		if first_pair != 0 and second_pair != 0:
