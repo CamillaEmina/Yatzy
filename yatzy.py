@@ -7,7 +7,7 @@ class Game:
 		self.throw_number = 0
 
 	def throw_dice(self, kept):
-		new = list(randint(1, 6, (5 - len(kept))))
+		new = list(randint(1,7, (5 - len(kept))))
 		self.throw_number += 1
 		self.dices = kept + new
 		return self.dices
@@ -22,7 +22,7 @@ class Game:
 
 	def get_points_at_finish(self, verbose):
 		points = 0
-		
+
 		#Enere til seksere:
 		points += sum(self.rounds[0][i] == 1 for i in range(5))
 		if verbose:
